@@ -1,0 +1,19 @@
+import Hero from '@/components/Hero'
+import Features from '@/components/Features'
+import HowItWorks from '@/components/HowItWorks'
+import Comparison from '@/components/Comparison'
+import CTA from '@/components/CTA'
+import Footer from '@/components/Footer'
+
+export default function Home() {
+  return (
+    <main className="min-h-screen bg-gradient-to-b from-white to-gray-50">
+      <Hero />
+      <Features />
+      <HowItWorks />
+      <Comparison />
+      <CTA />
+      <Footer />
+    </main>
+  )
+}
