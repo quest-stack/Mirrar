@@ -1,0 +1,424 @@
+{
+  "templates": [
+    {
+      "id": "login_test",
+      "name": "ログイン機能をテストする",
+      "description": "メール・パスワード入力の確認",
+      "icon": "📝",
+      "category": "authentication",
+      "steps": [
+        {
+          "id": "step1",
+          "type": "navigate",
+          "description": "ログインページを開く",
+          "prompt": "ログインページのURLを入力してください",
+          "hints": [
+            "例: https://example.com/login",
+            "ログインボタンがあるページのURLです"
+          ],
+          "detectionRules": {
+            "urlPatterns": ["login", "signin", "auth", "account"]
+          }
+        },
+        {
+          "id": "step2",
+          "type": "input",
+          "description": "メールアドレスを入力",
+          "prompt": "メールアドレスの入力欄をクリックしてください",
+          "hints": [
+            "通常「メール」や「Email」というラベルがあります",
+            "自動検出された要素には ✅ マークが表示されます"
+          ],
+          "detectionRules": {
+            "selectors": [
+              "input[type='email']",
+              "input[name*='email' i]",
+              "input[id*='email' i]",
+              "input[placeholder*='email' i]",
+              "input[autocomplete='email']"
+            ],
+            "labels": ["メール", "Email", "mail", "e-mail", "Eメール"],
+            "ariaLabels": ["email", "メール"],
+            "confidence": 0.9
+          },
+          "testData": {
+            "type": "email",
+            "placeholder": "test@example.com",
+            "validation": "email"
+          }
+        },
+        {
+          "id": "step3",
+          "type": "input",
+          "description": "パスワードを入力",
+          "prompt": "パスワードの入力欄をクリックしてください",
+          "hints": [
+            "通常「パスワード」や「Password」というラベルがあります",
+            "入力した内容は●●●で表示されます"
+          ],
+          "detectionRules": {
+            "selectors": [
+              "input[type='password']",
+              "input[name*='password' i]",
+              "input[id*='pass' i]",
+              "input[autocomplete='current-password']"
+            ],
+            "labels": ["パスワード", "Password", "pass", "パス"],
+            "ariaLabels": ["password", "パスワード"],
+            "confidence": 0.95
+          },
+          "testData": {
+            "type": "password",
+            "placeholder": "password123",
+            "validation": "password"
+          }
+        },
+        {
+          "id": "step4",
+          "type": "click",
+          "description": "ログインボタンをクリック",
+          "prompt": "ログインボタンをクリックしてください",
+          "hints": [
+            "「ログイン」や「Login」と書かれたボタンです",
+            "送信ボタンの場合もあります"
+          ],
+          "detectionRules": {
+            "selectors": [
+              "button[type='submit']",
+              "input[type='submit']",
+              "button[form]"
+            ],
+            "text": ["ログイン", "Login", "Sign in", "サインイン", "送信", "Submit"],
+            "ariaLabels": ["login", "submit", "ログイン"],
+            "confidence": 0.85
+          }
+        },
+        {
+          "id": "step5",
+          "type": "waitFor",
+          "description": "ログイン後の画面を確認",
+          "prompt": "ログイン成功後に表示される要素を選択してください",
+          "hints": [
+            "ダッシュボードやマイページなど",
+            "ログアウトボタンが表示される場合もあります"
+          ],
+          "detectionRules": {
+            "selectors": [
+              "[data-testid*='dashboard']",
+              "[data-testid*='logout']",
+              ".user-menu",
+              ".dashboard"
+            ],
+            "text": ["ダッシュボード", "Dashboard", "マイページ", "ログアウト", "Logout"],
+            "confidence": 0.7
+          },
+          "optional": true
+        }
+      ]
+    },
+    {
+      "id": "form_test",
+      "name": "フォーム送信をテストする",
+      "description": "入力→送信→完了画面の確認",
+      "icon": "📄",
+      "category": "forms",
+      "steps": [
+        {
+          "id": "step1",
+          "type": "navigate",
+          "description": "フォームページを開く",
+          "prompt": "テストしたいフォームのURLを入力してください",
+          "hints": [
+            "例: https://example.com/contact",
+            "お問い合わせフォームなど"
+          ],
+          "detectionRules": {
+            "urlPatterns": ["contact", "form", "inquiry", "お問い合わせ"]
+          }
+        },
+        {
+          "id": "step2",
+          "type": "input",
+          "description": "名前を入力",
+          "prompt": "名前入力欄をクリックしてください",
+          "hints": [
+            "「お名前」や「Name」というラベルがあります"
+          ],
+          "detectionRules": {
+            "selectors": [
+              "input[name*='name' i]",
+              "input[id*='name' i]",
+              "input[autocomplete='name']"
+            ],
+            "labels": ["名前", "お名前", "Name", "氏名"],
+            "confidence": 0.85
+          },
+          "testData": {
+            "type": "text",
+            "placeholder": "山田太郎"
+          }
+        },
+        {
+          "id": "step3",
+          "type": "input",
+          "description": "メールアドレスを入力",
+          "prompt": "メールアドレス入力欄をクリックしてください",
+          "detectionRules": {
+            "selectors": [
+              "input[type='email']",
+              "input[name*='email' i]",
+              "input[autocomplete='email']"
+            ],
+            "labels": ["メール", "Email", "メールアドレス"],
+            "confidence": 0.9
+          },
+          "testData": {
+            "type": "email",
+            "placeholder": "test@example.com"
+          }
+        },
+        {
+          "id": "step4",
+          "type": "input",
+          "description": "メッセージを入力",
+          "prompt": "メッセージ入力欄をクリックしてください",
+          "hints": [
+            "textarea（複数行入力）の場合が多いです"
+          ],
+          "detectionRules": {
+            "selectors": [
+              "textarea",
+              "input[name*='message' i]",
+              "input[name*='content' i]"
+            ],
+            "labels": ["メッセージ", "Message", "内容", "お問い合わせ内容"],
+            "confidence": 0.8
+          },
+          "testData": {
+            "type": "textarea",
+            "placeholder": "これはテストメッセージです。"
+          }
+        },
+        {
+          "id": "step5",
+          "type": "click",
+          "description": "送信ボタンをクリック",
+          "prompt": "送信ボタンをクリックしてください",
+          "detectionRules": {
+            "selectors": [
+              "button[type='submit']",
+              "input[type='submit']"
+            ],
+            "text": ["送信", "Submit", "送る", "Send"],
+            "confidence": 0.85
+          }
+        },
+        {
+          "id": "step6",
+          "type": "waitFor",
+          "description": "完了画面を確認",
+          "prompt": "送信完了メッセージが表示される要素を選択してください",
+          "hints": [
+            "「送信完了」や「Thank you」などのメッセージ"
+          ],
+          "detectionRules": {
+            "text": ["完了", "ありがとう", "Thank you", "送信しました", "Success"],
+            "confidence": 0.7
+          }
+        }
+      ]
+    },
+    {
+      "id": "shopping_test",
+      "name": "商品購入フローをテストする",
+      "description": "カートに追加→決済までの流れ",
+      "icon": "🛒",
+      "category": "ecommerce",
+      "steps": [
+        {
+          "id": "step1",
+          "type": "navigate",
+          "description": "商品ページを開く",
+          "prompt": "テストしたい商品ページのURLを入力してください",
+          "detectionRules": {
+            "urlPatterns": ["product", "item", "商品"]
+          }
+        },
+        {
+          "id": "step2",
+          "type": "click",
+          "description": "カートに追加ボタンをクリック",
+          "prompt": "「カートに追加」ボタンをクリックしてください",
+          "detectionRules": {
+            "selectors": [
+              "button[data-testid*='add-to-cart']",
+              "button[class*='add-to-cart']"
+            ],
+            "text": ["カートに追加", "Add to cart", "カートへ", "追加"],
+            "confidence": 0.85
+          }
+        },
+        {
+          "id": "step3",
+          "type": "click",
+          "description": "カートを表示",
+          "prompt": "カートアイコンまたはボタンをクリックしてください",
+          "detectionRules": {
+            "selectors": [
+              "[data-testid*='cart']",
+              ".cart-icon",
+              "#cart"
+            ],
+            "text": ["カート", "Cart", "買い物かご"],
+            "ariaLabels": ["cart", "カート"],
+            "confidence": 0.8
+          }
+        },
+        {
+          "id": "step4",
+          "type": "click",
+          "description": "購入手続きへ進む",
+          "prompt": "「購入手続き」または「チェックアウト」ボタンをクリックしてください",
+          "detectionRules": {
+            "selectors": [
+              "button[data-testid*='checkout']"
+            ],
+            "text": ["購入手続き", "Checkout", "レジに進む", "注文する"],
+            "confidence": 0.85
+          }
+        },
+        {
+          "id": "step5",
+          "type": "waitFor",
+          "description": "購入確認画面を確認",
+          "prompt": "購入確認画面が表示されたことを確認する要素を選択してください",
+          "detectionRules": {
+            "text": ["注文確認", "Order confirmation", "購入完了", "ご注文内容"],
+            "confidence": 0.7
+          },
+          "optional": true
+        }
+      ]
+    },
+    {
+      "id": "search_test",
+      "name": "検索機能をテストする",
+      "description": "キーワード入力→結果表示の確認",
+      "icon": "🔍",
+      "category": "search",
+      "steps": [
+        {
+          "id": "step1",
+          "type": "navigate",
+          "description": "検索ページを開く",
+          "prompt": "検索機能があるページのURLを入力してください",
+          "hints": [
+            "トップページやヘッダーに検索ボックスがある場合が多いです"
+          ]
+        },
+        {
+          "id": "step2",
+          "type": "input",
+          "description": "検索キーワードを入力",
+          "prompt": "検索ボックスをクリックしてください",
+          "detectionRules": {
+            "selectors": [
+              "input[type='search']",
+              "input[name*='search' i]",
+              "input[name*='query' i]",
+              "input[id*='search' i]",
+              "input[placeholder*='search' i]",
+              "input[role='searchbox']"
+            ],
+            "labels": ["検索", "Search", "キーワード"],
+            "ariaLabels": ["search", "検索"],
+            "confidence": 0.9
+          },
+          "testData": {
+            "type": "text",
+            "placeholder": "テスト"
+          }
+        },
+        {
+          "id": "step3",
+          "type": "click",
+          "description": "検索ボタンをクリック",
+          "prompt": "検索ボタンをクリックしてください",
+          "hints": [
+            "虫眼鏡アイコンの場合もあります",
+            "Enterキーでも検索できる場合があります"
+          ],
+          "detectionRules": {
+            "selectors": [
+              "button[type='submit']",
+              "button[aria-label*='search' i]"
+            ],
+            "text": ["検索", "Search", "🔍"],
+            "ariaLabels": ["search", "検索"],
+            "confidence": 0.8
+          }
+        },
+        {
+          "id": "step4",
+          "type": "waitFor",
+          "description": "検索結果を確認",
+          "prompt": "検索結果が表示されたことを確認する要素を選択してください",
+          "hints": [
+            "検索結果の一覧や件数表示など"
+          ],
+          "detectionRules": {
+            "selectors": [
+              ".search-results",
+              "[data-testid*='search-results']",
+              ".results"
+            ],
+            "text": ["検索結果", "Results", "件"],
+            "confidence": 0.7
+          }
+        }
+      ]
+    },
+    {
+      "id": "custom_test",
+      "name": "自分で一から作る",
+      "description": "カスタムテストを作成",
+      "icon": "✨",
+      "category": "custom",
+      "steps": [
+        {
+          "id": "step1",
+          "type": "navigate",
+          "description": "ページを開く",
+          "prompt": "テストしたいページのURLを入力してください"
+        }
+      ]
+    }
+  ],
+  "categories": [
+    {
+      "id": "authentication",
+      "name": "認証・ログイン",
+      "icon": "🔐"
+    },
+    {
+      "id": "forms",
+      "name": "フォーム",
+      "icon": "📝"
+    },
+    {
+      "id": "ecommerce",
+      "name": "Eコマース",
+      "icon": "🛒"
+    },
+    {
+      "id": "search",
+      "name": "検索",
+      "icon": "🔍"
+    },
+    {
+      "id": "custom",
+      "name": "カスタム",
+      "icon": "✨"
+    }
+  ]
+}
