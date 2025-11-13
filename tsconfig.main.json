@@ -6,6 +6,6 @@
     "outDir": "dist/main",
     "noEmit": false
   },
-  "include": ["src/main/**/*"],
+  "include": ["src/main/**/*", "src/engine/**/*", "src/parser/**/*", "src/plugins/**/*", "src/storage/**/*", "src/utils/**/*"],
   "exclude": ["node_modules", "dist", "release", "src/renderer/**/*"]
 }
