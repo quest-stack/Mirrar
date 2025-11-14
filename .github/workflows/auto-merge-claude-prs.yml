@@ -1,0 +1,38 @@
+name: Auto-merge Claude PRs
+
+on:
+  pull_request:
+    types: [opened, synchronize, reopened]
+
+jobs:
+  auto-merge:
+    # claude/ で始まるブランチからのPRのみ処理
+    if: startsWith(github.head_ref, 'claude/')
+    runs-on: ubuntu-latest
+
+    permissions:
+      pull-requests: write
+      contents: write
+
+    steps:
+      - name: Check out code
+        uses: actions/checkout@v4
+
+      - name: Auto-approve PR
+        run: gh pr review --approve "$PR_URL"
+        env:
+          PR_URL: ${{ github.event.pull_request.html_url }}
+          GITHUB_TOKEN: ${{ secrets.GITHUB_TOKEN }}
+
+      - name: Enable auto-merge
+        run: gh pr merge --auto --squash "$PR_URL"
+        env:
+          PR_URL: ${{ github.event.pull_request.html_url }}
+          GITHUB_TOKEN: ${{ secrets.GITHUB_TOKEN }}
+
+      - name: Comment on PR
+        run: |
+          gh pr comment "$PR_URL" --body "🤖 This PR from a Claude Code branch will be automatically merged once all checks pass."
+        env:
+          PR_URL: ${{ github.event.pull_request.html_url }}
+          GITHUB_TOKEN: ${{ secrets.GITHUB_TOKEN }}
