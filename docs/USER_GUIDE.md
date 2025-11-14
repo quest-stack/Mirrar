@@ -1099,8 +1099,8 @@ results/
 
 #### コミュニティで質問
 
-1. **GitHub Discussions**: https://github.com/quest-stack/Mirrar/discussions
-2. **GitHub Issues**: バグ報告は https://github.com/quest-stack/Mirrar/issues
+1. **GitHub Discussions**: https://github.com/quest-stack/Mirarr/discussions
+2. **GitHub Issues**: バグ報告は https://github.com/quest-stack/Mirarr/issues
 
 **良い質問の書き方**:
 ```markdown

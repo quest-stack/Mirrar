@@ -36,7 +36,7 @@
 
 ```bash
 # リポジトリをクローン
-git clone https://github.com/quest-stack/Mirrar.git
+git clone https://github.com/quest-stack/Mirarr.git
 cd Mirarr
 
 # 依存関係をインストール
@@ -167,8 +167,8 @@ MIT License - 詳細は [LICENSE](LICENSE) をご覧ください。
 ## 💬 サポート
 
 - 📖 [ユーザーガイド](docs/USER_GUIDE.md)
-- 🐛 [Issue トラッカー](https://github.com/quest-stack/Mirrar/issues)
-- 💡 [ディスカッション](https://github.com/quest-stack/Mirrar/discussions)
+- 🐛 [Issue トラッカー](https://github.com/quest-stack/Mirarr/issues)
+- 💡 [ディスカッション](https://github.com/quest-stack/Mirarr/discussions)
 
 ## 🙏 謝辞
 

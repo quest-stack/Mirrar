@@ -21,7 +21,7 @@ export default function CTA() {
           {/* CTAボタン */}
           <div className="flex flex-col sm:flex-row gap-6 justify-center items-center mb-12">
             <a
-              href="https://github.com/quest-stack/Mirrar/releases"
+              href="https://github.com/quest-stack/Mirarr/releases"
               className="bg-white text-[#0F4C75] px-10 py-5 rounded-full font-bold text-lg hover:bg-gray-100 transition-all duration-300 shadow-2xl hover:shadow-3xl transform hover:-translate-y-1 inline-block"
               target="_blank"
               rel="noopener noreferrer"
@@ -29,7 +29,7 @@ export default function CTA() {
               無料ダウンロード
             </a>
             <a
-              href="https://github.com/quest-stack/Mirrar"
+              href="https://github.com/quest-stack/Mirarr"
               className="bg-transparent text-white px-10 py-5 rounded-full font-bold text-lg border-2 border-white hover:bg-white hover:text-[#0F4C75] transition-all duration-300 inline-block"
               target="_blank"
               rel="noopener noreferrer"
