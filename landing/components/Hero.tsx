@@ -19,7 +19,7 @@ export default function Hero() {
 
         {/* サブキャッチ */}
         <p className="text-lead mb-16 max-w-3xl mx-auto">
-          ラーの鏡のようにバグを映し出す<br />
+          鏡のようにバグを映し出す<br />
           コード不要、完全無料のテスト自動化ツール
         </p>
 

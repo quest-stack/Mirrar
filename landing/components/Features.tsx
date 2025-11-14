@@ -40,7 +40,7 @@ export default function Features() {
         {/* セクションヘッダー */}
         <div className="text-center mb-20">
           <h2 className="heading-lg mb-6">
-            Playwrightより<span className="gradient-text">簡単</span>
+            コード不要で<span className="gradient-text">簡単</span>
           </h2>
           <p className="text-lead max-w-3xl mx-auto">
             非エンジニアのために設計された、本当に使いやすいテスト自動化ツール

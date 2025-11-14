@@ -12,7 +12,7 @@ export default function Footer() {
               ミラー
             </p>
             <p className="text-gray-400 leading-relaxed mb-6 max-w-md">
-              ラーの鏡のように真実を映し出す、完全無料のテスト自動化ツール。
+              システムの真実を映し出す、完全無料のテスト自動化ツール。
               非エンジニアでも使えるシンプルな設計で、Vibe Coding対応。
             </p>
             <a
@@ -82,7 +82,7 @@ export default function Footer() {
         <div className="separator"></div>
         <div className="pt-8 text-center">
           <p className="text-sm text-gray-500">
-            © 2024 Quest Stack. MIT License.
+            © 2024 合同会社QUEST. MIT License.
           </p>
           <p className="text-xs text-gray-600 mt-2">
             Made for non-engineers
