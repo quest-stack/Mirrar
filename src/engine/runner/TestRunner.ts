@@ -1,4 +1,5 @@
 import puppeteer, { Browser, Page } from 'puppeteer';
+import { PuppeteerScreenRecorder } from 'puppeteer-screen-recorder';
 import { NavigateAction } from '../actions/NavigateAction';
 import { ClickAction } from '../actions/ClickAction';
 import { TypeAction } from '../actions/TypeAction';
@@ -36,12 +37,15 @@ export interface TestRunnerOptions {
     width: number;
     height: number;
   };
+  recordVideo?: boolean;
+  videoPath?: string;
   onProgress?: (stepIndex: number, total: number, result: ActionResult) => void;
 }
 
 export class TestRunner {
   private browser: Browser | null = null;
   private page: Page | null = null;
+  private recorder: PuppeteerScreenRecorder | null = null;
   private actions: Map<string, BaseAction>;
 
   constructor() {
@@ -89,6 +93,20 @@ export class TestRunner {
 
       if (!this.page) {
         throw new Error('Page not initialized');
+      }
+
+      // Start video recording if enabled
+      if (options.recordVideo && options.videoPath) {
+        this.recorder = new PuppeteerScreenRecorder(this.page, {
+          followNewTab: false,
+          fps: 30,
+          videoFrame: {
+            width: 1280,
+            height: 720,
+          },
+        });
+        await this.recorder.start(options.videoPath);
+        result.videoPath = options.videoPath;
       }
 
       // Execute each step
@@ -158,6 +176,16 @@ export class TestRunner {
   }
 
   async cleanup(): Promise<void> {
+    // Stop video recording if active
+    if (this.recorder) {
+      try {
+        await this.recorder.stop();
+      } catch (error) {
+        console.error('Failed to stop recording:', error);
+      }
+      this.recorder = null;
+    }
+
     if (this.page) {
       await this.page.close();
       this.page = null;

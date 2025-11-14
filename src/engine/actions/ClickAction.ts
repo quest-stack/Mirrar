@@ -9,20 +9,31 @@ export class ClickAction extends BaseAction {
       throw new Error('Selector is required for click action');
     }
 
-    // Wait for element to be visible and stable
-    await page.waitForSelector(step.selector, {
-      visible: true,
-      timeout: step.timeout || 10000,
-    });
+    try {
+      // Wait for element to be visible and stable
+      await page.waitForSelector(step.selector, {
+        visible: true,
+        timeout: step.timeout || 10000,
+      });
+    } catch (error: any) {
+      if (error.message?.includes('Timeout') || error.message?.includes('waiting for selector')) {
+        throw new Error(`Element not found or not visible: ${step.selector} (waited ${step.timeout || 10000}ms)`);
+      }
+      throw new Error(`Failed to find element ${step.selector}: ${error.message}`);
+    }
 
-    // Wait for element to be stable (not moving)
-    await this.waitForStability(page, step.selector);
+    try {
+      // Wait for element to be stable (not moving)
+      await this.waitForStability(page, step.selector);
 
-    // Click the element
-    await page.click(step.selector);
+      // Click the element
+      await page.click(step.selector);
 
-    // Wait for any navigation or network activity
-    await this.smartWait(page);
+      // Wait for any navigation or network activity
+      await this.smartWait(page);
+    } catch (error: any) {
+      throw new Error(`Failed to click element ${step.selector}: ${error.message}`);
+    }
   }
 
   private async waitForStability(page: Page, selector: string): Promise<void> {

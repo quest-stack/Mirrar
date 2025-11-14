@@ -18,13 +18,20 @@ export class WaitForAction extends BaseAction {
       throw new Error('Selector is required for waitFor action');
     }
 
-    // Wait for element to appear
-    await page.waitForSelector(step.selector, {
-      visible: true,
-      timeout: step.timeout || 10000,
-    });
+    try {
+      // Wait for element to appear
+      await page.waitForSelector(step.selector, {
+        visible: true,
+        timeout: step.timeout || 10000,
+      });
 
-    // Additional smart wait
-    await this.smartWait(page);
+      // Additional smart wait
+      await this.smartWait(page);
+    } catch (error: any) {
+      if (error.message?.includes('Timeout') || error.message?.includes('waiting for selector')) {
+        throw new Error(`Element did not appear: ${step.selector} (waited ${step.timeout || 10000}ms)`);
+      }
+      throw new Error(`Failed to wait for element ${step.selector}: ${error.message}`);
+    }
   }
 }

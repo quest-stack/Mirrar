@@ -9,24 +9,44 @@ export class TypeAction extends BaseAction {
       throw new Error('Selector is required for type action');
     }
 
-    if (step.value === undefined) {
+    if (step.value === undefined || step.value === null) {
       throw new Error('Value is required for type action');
     }
 
-    // Wait for element to be visible
-    await page.waitForSelector(step.selector, {
-      visible: true,
-      timeout: step.timeout || 10000,
-    });
+    try {
+      // Wait for element to be visible
+      await page.waitForSelector(step.selector, {
+        visible: true,
+        timeout: step.timeout || 10000,
+      });
+    } catch (error: any) {
+      if (error.message?.includes('Timeout') || error.message?.includes('waiting for selector')) {
+        throw new Error(`Input field not found or not visible: ${step.selector} (waited ${step.timeout || 10000}ms)`);
+      }
+      throw new Error(`Failed to find input field ${step.selector}: ${error.message}`);
+    }
 
-    // Clear existing value
-    await page.click(step.selector, { clickCount: 3 });
-    await page.keyboard.press('Backspace');
+    try {
+      // Check if element is an input or textarea
+      const isInputField = await page.$eval(step.selector, (el) => {
+        return el instanceof HTMLInputElement || el instanceof HTMLTextAreaElement;
+      });
 
-    // Type the value with a slight delay to simulate human typing
-    await page.type(step.selector, step.value, { delay: 50 });
+      if (!isInputField) {
+        throw new Error(`Element ${step.selector} is not an input field or textarea`);
+      }
 
-    // Wait a bit for any auto-complete or validation
-    await page.waitForTimeout(300);
+      // Clear existing value
+      await page.click(step.selector, { clickCount: 3 });
+      await page.keyboard.press('Backspace');
+
+      // Type the value with a slight delay to simulate human typing
+      await page.type(step.selector, String(step.value), { delay: 50 });
+
+      // Wait a bit for any auto-complete or validation
+      await page.waitForTimeout(300);
+    } catch (error: any) {
+      throw new Error(`Failed to type into ${step.selector}: ${error.message}`);
+    }
   }
 }
