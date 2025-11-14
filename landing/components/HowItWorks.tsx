@@ -82,7 +82,7 @@ export default function HowItWorks() {
         {/* CTA */}
         <div className="text-center mt-20">
           <a
-            href="https://github.com/quest-stack/Mirarr/releases"
+            href="https://github.com/quest-stack/Mirrar/releases"
             className="btn-primary text-lg"
             target="_blank"
             rel="noopener noreferrer"

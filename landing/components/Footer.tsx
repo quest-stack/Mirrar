@@ -16,7 +16,7 @@ export default function Footer() {
               非エンジニアでも使えるシンプルな設計で、Vibe Coding対応。
             </p>
             <a
-              href="https://github.com/quest-stack/Mirarr"
+              href="https://github.com/quest-stack/Mirrar"
               className="inline-flex items-center gap-2 text-gray-400 hover:text-white transition-colors"
               target="_blank"
               rel="noopener noreferrer"
@@ -33,17 +33,17 @@ export default function Footer() {
             <h4 className="text-white font-bold mb-4 text-sm uppercase tracking-wider">リンク</h4>
             <ul className="space-y-3">
               <li>
-                <a href="https://github.com/quest-stack/Mirarr/releases" className="text-sm hover:text-white transition-colors" target="_blank" rel="noopener noreferrer">
+                <a href="https://github.com/quest-stack/Mirrar/releases" className="text-sm hover:text-white transition-colors" target="_blank" rel="noopener noreferrer">
                   ダウンロード
                 </a>
               </li>
               <li>
-                <a href="https://github.com/quest-stack/Mirarr/blob/HEAD/docs/USER_GUIDE.md" className="text-sm hover:text-white transition-colors" target="_blank" rel="noopener noreferrer">
+                <a href="https://github.com/quest-stack/Mirrar/blob/HEAD/docs/USER_GUIDE.md" className="text-sm hover:text-white transition-colors" target="_blank" rel="noopener noreferrer">
                   ユーザーガイド
                 </a>
               </li>
               <li>
-                <a href="https://github.com/quest-stack/Mirarr/issues" className="text-sm hover:text-white transition-colors" target="_blank" rel="noopener noreferrer">
+                <a href="https://github.com/quest-stack/Mirrar/issues" className="text-sm hover:text-white transition-colors" target="_blank" rel="noopener noreferrer">
                   Issue報告
                 </a>
               </li>
@@ -55,22 +55,22 @@ export default function Footer() {
             <h4 className="text-white font-bold mb-4 text-sm uppercase tracking-wider">リソース</h4>
             <ul className="space-y-3">
               <li>
-                <a href="https://github.com/quest-stack/Mirarr/blob/HEAD/docs/SECURITY.md" className="text-sm hover:text-white transition-colors" target="_blank" rel="noopener noreferrer">
+                <a href="https://github.com/quest-stack/Mirrar/blob/HEAD/docs/SECURITY.md" className="text-sm hover:text-white transition-colors" target="_blank" rel="noopener noreferrer">
                   セキュリティ
                 </a>
               </li>
               <li>
-                <a href="https://github.com/quest-stack/Mirarr/blob/HEAD/docs/DATABASE.md" className="text-sm hover:text-white transition-colors" target="_blank" rel="noopener noreferrer">
+                <a href="https://github.com/quest-stack/Mirrar/blob/HEAD/docs/DATABASE.md" className="text-sm hover:text-white transition-colors" target="_blank" rel="noopener noreferrer">
                   データベース
                 </a>
               </li>
               <li>
-                <a href="https://github.com/quest-stack/Mirarr/blob/HEAD/DESIGN.md" className="text-sm hover:text-white transition-colors" target="_blank" rel="noopener noreferrer">
+                <a href="https://github.com/quest-stack/Mirrar/blob/HEAD/DESIGN.md" className="text-sm hover:text-white transition-colors" target="_blank" rel="noopener noreferrer">
                   設計書
                 </a>
               </li>
               <li>
-                <a href="https://github.com/quest-stack/Mirarr/blob/HEAD/LICENSE" className="text-sm hover:text-white transition-colors" target="_blank" rel="noopener noreferrer">
+                <a href="https://github.com/quest-stack/Mirrar/blob/HEAD/LICENSE" className="text-sm hover:text-white transition-colors" target="_blank" rel="noopener noreferrer">
                   ライセンス
                 </a>
               </li>
