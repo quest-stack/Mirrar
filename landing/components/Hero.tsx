@@ -5,7 +5,7 @@ export default function Hero() {
         {/* ロゴ・ブランド */}
         <div className="mb-12 animate-fade-in">
           <h1 className="text-6xl md:text-8xl font-black tracking-tighter mb-4">
-            <span className="gradient-text">Mirarr</span>
+            <span className="gradient-text">Mirrar</span>
           </h1>
           <p className="text-sm md:text-base text-gray-500 tracking-widest">
             ミラー
