@@ -1,9 +1,9 @@
 {
-  "name": "auto-pailot-tester",
+  "name": "mirarr",
   "version": "0.1.0",
   "description": "Free, AI-powered test automation tool for non-engineers",
   "main": "dist/main/index.js",
-  "author": "Auto Pailot Team",
+  "author": "合同会社QUEST",
   "license": "MIT",
   "scripts": {
     "dev": "concurrently \"npm run dev:renderer\" \"npm run dev:main\"",
@@ -57,8 +57,8 @@
     "vitest": "^1.1.0"
   },
   "build": {
-    "appId": "com.autopailot.tester",
-    "productName": "Auto Pailot Tester",
+    "appId": "com.queststack.mirarr",
+    "productName": "Mirarr",
     "directories": {
       "output": "release"
     },
