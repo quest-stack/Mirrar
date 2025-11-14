@@ -1,6 +1,6 @@
 # 開発ガイド
 
-Mirarrの開発に参加する際のガイドです。
+Mirrarの開発に参加する際のガイドです。
 
 ## 📋 目次
 
@@ -26,7 +26,7 @@ Mirarrの開発に参加する際のガイドです。
 ```bash
 # リポジトリをクローン
 git clone https://github.com/quest-stack/Mirrar.git
-cd Mirarr
+cd Mirrar
 
 # 依存関係をインストール
 npm install

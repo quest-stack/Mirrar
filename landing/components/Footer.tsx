@@ -6,7 +6,7 @@ export default function Footer() {
           {/* ブランド */}
           <div className="col-span-1 md:col-span-2">
             <h3 className="text-3xl font-bold text-white mb-4">
-              Mirarr
+              Mirrar
             </h3>
             <p className="text-sm text-gray-400 mb-1">
               ミラー

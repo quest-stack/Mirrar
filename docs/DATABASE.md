@@ -2,7 +2,7 @@
 
 ## 概要
 
-Mirarrは、2つのデータベースオプションをサポートしています：
+Mirrarは、2つのデータベースオプションをサポートしています：
 
 1. **SQLite（ローカル）** - デフォルト、完全オフライン
 2. **Turso（クラウド）** - オプション、無料枠が大きい
@@ -117,7 +117,7 @@ Database URL: libsql://autopailot-tester-your-username.turso.io
 Token: eyJh...（長いトークン）
 ```
 
-#### 3. Mirarrで設定
+#### 3. Mirrarで設定
 
 **方法1: 設定画面から**
 ```
