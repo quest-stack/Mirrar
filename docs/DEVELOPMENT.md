@@ -1,6 +1,6 @@
 # 開発ガイド
 
-Auto Pailot Testerの開発に参加する際のガイドです。
+Mirarrの開発に参加する際のガイドです。
 
 ## 📋 目次
 
@@ -25,8 +25,8 @@ Auto Pailot Testerの開発に参加する際のガイドです。
 
 ```bash
 # リポジトリをクローン
-git clone https://github.com/quest-stack/auto_pailot_tester.git
-cd auto_pailot_tester
+git clone https://github.com/quest-stack/Mirarr.git
+cd Mirarr
 
 # 依存関係をインストール
 npm install

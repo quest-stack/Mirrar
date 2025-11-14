@@ -26,7 +26,7 @@ export default function Hero() {
         {/* CTA */}
         <div className="flex flex-col sm:flex-row gap-6 justify-center items-center mb-20">
           <a
-            href="https://github.com/quest-stack/auto_pailot_tester/releases"
+            href="https://github.com/quest-stack/Mirarr/releases"
             className="btn-primary text-lg"
             target="_blank"
             rel="noopener noreferrer"

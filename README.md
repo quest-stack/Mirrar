@@ -1,4 +1,4 @@
-# 🚀 Auto Pailot Tester
+# 🪞 Mirarr（ミラー）
 
 > 非エンジニアでも使える、完全無料のテスト自動化ツール
 
@@ -12,9 +12,9 @@
 - **🤖 Vibe Coding対応**: Claude Code、Cursor、Windsurf等のAIツールと連携して問題を自動解決
 - **📊 詳細なレポート**: 動画・スクリーンショット付きの分かりやすい結果表示
 
-## 🎯 Playwrightとの違い
+## 🎯 既存ツールとの違い
 
-| 項目 | Playwright | Auto Pailot |
+| 項目 | コードベースのツール | Mirarr |
 |------|-----------|-------------|
 | **操作方法** | コードを書く | 画面で操作するだけ |
 | **セレクター** | 自分で指定 | **AIが自動で最適なものを選択** |
@@ -22,6 +22,8 @@
 | **テスト作成** | 1から書く | **テンプレート選択で8割完成** |
 | **結果** | ログだけ | **動画+スクショ+改善提案** |
 | **学習コスト** | 高い | **チュートリアルで10分** |
+
+**補足:** コードベースのテストツール（Playwright、Puppeteer等）は、エンジニア向けの強力で優れたツールです。Mirarr は、それらとは異なるアプローチで非エンジニアでもVibe Codingで使えるように設計されています。プログラミングスキルや用途に応じて、最適なツールをお選びください。
 
 ## 📦 インストール
 
@@ -34,8 +36,8 @@
 
 ```bash
 # リポジトリをクローン
-git clone https://github.com/your-username/auto_pailot_tester.git
-cd auto_pailot_tester
+git clone https://github.com/quest-stack/Mirarr.git
+cd Mirarr
 
 # 依存関係をインストール
 npm install
@@ -114,7 +116,7 @@ example.comを開いて、
 ## 📁 プロジェクト構造
 
 ```
-auto_pailot_tester/
+Mirarr/
 ├── src/
 │   ├── main/              # Electronメインプロセス
 │   ├── renderer/          # Reactアプリ
@@ -165,8 +167,8 @@ MIT License - 詳細は [LICENSE](LICENSE) をご覧ください。
 ## 💬 サポート
 
 - 📖 [ユーザーガイド](docs/USER_GUIDE.md)
-- 🐛 [Issue トラッカー](https://github.com/your-username/auto_pailot_tester/issues)
-- 💡 [ディスカッション](https://github.com/your-username/auto_pailot_tester/discussions)
+- 🐛 [Issue トラッカー](https://github.com/quest-stack/Mirarr/issues)
+- 💡 [ディスカッション](https://github.com/quest-stack/Mirarr/discussions)
 
 ## 🙏 謝辞
 
@@ -177,4 +179,4 @@ MIT License - 詳細は [LICENSE](LICENSE) をご覧ください。
 
 ---
 
-**Made with ❤️ for non-engineers**
+**Made by 合同会社QUEST for non-engineers**
