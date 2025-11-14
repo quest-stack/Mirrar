@@ -1,5 +1,5 @@
 # テスト自動化システム設計書
-## Auto Pailot Tester
+## Mirarr
 
 > 🎯 **コンセプト**: 完全無料・APIコスト0円で使える、非エンジニア向けテスト自動化ツール
 
@@ -25,7 +25,7 @@
 
 ### Playwrightとの差別化
 
-| 項目 | Playwright | Auto Pailot |
+| 項目 | Playwright | Mirarr |
 |------|-----------|-------------|
 | コード記述 | 必須 | 不要 |
 | セットアップ | CLI操作が必要 | GUIで完結 |
@@ -722,7 +722,7 @@ ${context.testName}のテストで、どんな検証をすべきですか？
 ### ディレクトリ構造
 
 ```
-auto_pailot_tester/
+Mirarr/
 ├── src/
 │   ├── main/                      # Electronメインプロセス
 │   │   ├── index.ts               # アプリエントリーポイント

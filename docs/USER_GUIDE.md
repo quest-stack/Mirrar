@@ -1,4 +1,4 @@
-# 📖 Auto Pailot Tester ユーザーガイド
+# 📖 Mirarr ユーザーガイド
 
 > 10分で始められる、テスト自動化の完全ガイド
 
@@ -17,7 +17,7 @@
 
 ## はじめに
 
-Auto Pailot Testerは、プログラミング知識がなくても使えるテスト自動化ツールです。
+Mirarrは、プログラミング知識がなくても使えるテスト自動化ツールです。
 
 ### こんな人におすすめ
 
@@ -26,7 +26,7 @@ Auto Pailot Testerは、プログラミング知識がなくても使えるテ�
 - Playwrightは難しすぎた
 - 無料で使いたい
 
-### Auto Pailot Testerでできること
+### Mirarrでできること
 
 - ✅ ログイン機能のテスト
 - ✅ フォーム送信のテスト
@@ -389,7 +389,7 @@ https://example.com/contactを開く
 
 **Vibe Coding** = Claude Code、Cursor、Windsurf、GitHub Copilot等のAIツールを使った開発スタイル
 
-Auto Pailot Testerと連携することで、テストの問題をAIに解決してもらえます。
+Mirarrと連携することで、テストの問題をAIに解決してもらえます。
 
 ### 対応しているAIツール
 
@@ -444,7 +444,7 @@ Ctrl+V (Mac: Cmd+V)
 #### ステップ4: 結果を適用
 
 1. AIツールが生成した修正案をコピー
-2. Auto Pailot Testerに戻る
+2. Mirarrに戻る
 3. 「**適用**」ボタンを押す
 4. テストを再実行
 
@@ -459,7 +459,7 @@ Ctrl+V (Mac: Cmd+V)
 
 #### AIツールに依頼
 
-Auto Pailot Testerが生成したプロンプト:
+Mirarrが生成したプロンプト:
 ```
 ログインボタンのセレクターが見つかりません。
 以下のHTML構造で、最も確実にボタンを検出する方法を教えてください：
@@ -528,7 +528,7 @@ URL: https://example.com/login
 - ログインボタンクリック
 - ダッシュボード表示確認
 
-Auto Pailot Tester形式のJSON定義で出力してください。
+Mirarr形式のJSON定義で出力してください。
 ```
 
 #### 3. 検証項目提案
@@ -569,7 +569,7 @@ TimeoutError: waiting for selector `#product-list` failed: timeout 30000ms excee
 - ✅ APIキーやトークンが含まれていないか
 - ✅ 個人情報（実名、住所、電話番号）が含まれていないか
 
-Auto Pailot Testerは自動的にチェックしますが、**手動でも確認してください**。
+Mirarrは自動的にチェックしますが、**手動でも確認してください**。
 
 **安全なプロンプト例**:
 ```
@@ -606,7 +606,7 @@ Auto Pailot Testerは自動的にチェックしますが、**手動でも確認
 
 **A**:
 
-| 比較項目 | Auto Pailot Tester | Playwright |
+| 比較項目 | Mirarr | Playwright |
 |---------|-------------------|-----------|
 | **プログラミング** | 不要 | 必要（JavaScript/TypeScript） |
 | **テスト作成** | テンプレート選択＋GUI操作 | コードを書く |
@@ -616,7 +616,7 @@ Auto Pailot Testerは自動的にチェックしますが、**手動でも確認
 | **価格** | 無料 | 無料（有料サポートあり） |
 
 **使い分け**:
-- 非エンジニア、簡単なテスト → Auto Pailot Tester
+- 非エンジニア、簡単なテスト → Mirarr
 - エンジニア、複雑なテスト → Playwright
 
 ### 🛠️ 技術的な質問
@@ -1000,7 +1000,7 @@ npm install puppeteer
 
 **解決方法**:
 1. システム環境設定 → セキュリティとプライバシー
-2. フルディスクアクセス → Auto Pailot Tester を許可
+2. フルディスクアクセス → Mirarr を許可
 
 ---
 
@@ -1099,8 +1099,8 @@ results/
 
 #### コミュニティで質問
 
-1. **GitHub Discussions**: https://github.com/quest-stack/auto_pailot_tester/discussions
-2. **GitHub Issues**: バグ報告は https://github.com/quest-stack/auto_pailot_tester/issues
+1. **GitHub Discussions**: https://github.com/quest-stack/Mirarr/discussions
+2. **GitHub Issues**: バグ報告は https://github.com/quest-stack/Mirarr/issues
 
 **良い質問の書き方**:
 ```markdown
@@ -1121,7 +1121,7 @@ results/
 
 ## 環境
 - OS: Windows 11
-- バージョン: Auto Pailot Tester v0.1.0
+- バージョン: Mirarr v0.1.0
 - ブラウザ: Chrome 120
 
 ## スクリーンショット
