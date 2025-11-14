@@ -23,7 +23,7 @@ function createWindow() {
       contextIsolation: true,
       preload: path.join(__dirname, 'preload.js'),
     },
-    title: 'Auto Pailot Tester',
+    title: 'Mirarr',
     backgroundColor: '#ffffff',
   });
 
