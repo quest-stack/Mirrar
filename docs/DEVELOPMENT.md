@@ -25,7 +25,7 @@ Mirarrの開発に参加する際のガイドです。
 
 ```bash
 # リポジトリをクローン
-git clone https://github.com/quest-stack/Mirarr.git
+git clone https://github.com/quest-stack/Mirrar.git
 cd Mirarr
 
 # 依存関係をインストール
