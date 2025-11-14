@@ -148,7 +148,7 @@ export function validateSelector(selector: string): { valid: boolean; error?: st
 /**
  * ファイルパスの検証（パストラバーサル攻撃を防ぐ）
  */
-export function validateFilePath(filePath: string, baseDir: string): boolean {
+export function validateFilePath(filePath: string, _baseDir: string): boolean {
   // 相対パスのチェック
   if (filePath.includes('..')) {
     return false;

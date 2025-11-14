@@ -6,7 +6,7 @@ export class AriaStrategy implements DetectionStrategy {
 
   async detect(
     page: Page,
-    description: string,
+    _description: string,
     rules?: DetectionRules
   ): Promise<DetectionResult[]> {
     const results: DetectionResult[] = [];

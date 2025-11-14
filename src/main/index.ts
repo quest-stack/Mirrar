@@ -114,7 +114,7 @@ ipcMain.handle('stop-test', async () => {
 });
 
 // Element detection (placeholder)
-ipcMain.handle('detect-elements', async (_event, url: string, rules: any) => {
+ipcMain.handle('detect-elements', async (_event, _url: string, _rules: any) => {
   // This would open a browser and detect elements
   // For now, return empty array
   return [];
@@ -182,7 +182,7 @@ ipcMain.handle('delete-test', async (_event, testId: string) => {
 });
 
 // Screenshot and video (placeholder for now)
-ipcMain.handle('get-screenshot', async (_event, testId: string, stepIndex: number) => {
+ipcMain.handle('get-screenshot', async (_event, _testId: string, _stepIndex: number) => {
   // Screenshots are embedded in test results as base64
   return null;
 });

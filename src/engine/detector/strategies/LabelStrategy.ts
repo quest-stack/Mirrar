@@ -6,7 +6,7 @@ export class LabelStrategy implements DetectionStrategy {
 
   async detect(
     page: Page,
-    description: string,
+    _description: string,
     rules?: DetectionRules
   ): Promise<DetectionResult[]> {
     const results: DetectionResult[] = [];
@@ -15,14 +15,8 @@ export class LabelStrategy implements DetectionStrategy {
     for (const labelText of labels) {
       try {
         // Find label elements containing the text
-        const labelSelectors = [
-          `label:has-text("${labelText}")`,
-          `label[for]:has-text("${labelText}")`,
-        ];
-
-        for (const labelSelector of labelSelectors) {
-          // This approach works in Puppeteer with page.evaluate
-          const elements = await page.evaluate((lText) => {
+        // Note: has-text is not a standard CSS selector, using evaluate instead
+        const elements = await page.evaluate((lText) => {
             const results: Array<{ selector: string; index: number }> = [];
             const labels = Array.from(document.querySelectorAll('label'));
 
@@ -70,7 +64,6 @@ export class LabelStrategy implements DetectionStrategy {
               // Ignore
             }
           }
-        }
       } catch (error) {
         // Ignore errors
       }
