@@ -38,7 +38,7 @@ export default function Footer() {
                 </a>
               </li>
               <li>
-                <a href="https://github.com/quest-stack/Mirarr/blob/claude/mirarr-branding-update-01GGevMRrQec4ubfEUBZ2q6P/docs/USER_GUIDE.md" className="text-sm hover:text-white transition-colors" target="_blank" rel="noopener noreferrer">
+                <a href="https://github.com/quest-stack/Mirarr/blob/HEAD/docs/USER_GUIDE.md" className="text-sm hover:text-white transition-colors" target="_blank" rel="noopener noreferrer">
                   ユーザーガイド
                 </a>
               </li>
@@ -55,22 +55,22 @@ export default function Footer() {
             <h4 className="text-white font-bold mb-4 text-sm uppercase tracking-wider">リソース</h4>
             <ul className="space-y-3">
               <li>
-                <a href="https://github.com/quest-stack/Mirarr/blob/claude/mirarr-branding-update-01GGevMRrQec4ubfEUBZ2q6P/docs/SECURITY.md" className="text-sm hover:text-white transition-colors" target="_blank" rel="noopener noreferrer">
+                <a href="https://github.com/quest-stack/Mirarr/blob/HEAD/docs/SECURITY.md" className="text-sm hover:text-white transition-colors" target="_blank" rel="noopener noreferrer">
                   セキュリティ
                 </a>
               </li>
               <li>
-                <a href="https://github.com/quest-stack/Mirarr/blob/claude/mirarr-branding-update-01GGevMRrQec4ubfEUBZ2q6P/docs/DATABASE.md" className="text-sm hover:text-white transition-colors" target="_blank" rel="noopener noreferrer">
+                <a href="https://github.com/quest-stack/Mirarr/blob/HEAD/docs/DATABASE.md" className="text-sm hover:text-white transition-colors" target="_blank" rel="noopener noreferrer">
                   データベース
                 </a>
               </li>
               <li>
-                <a href="https://github.com/quest-stack/Mirarr/blob/claude/mirarr-branding-update-01GGevMRrQec4ubfEUBZ2q6P/DESIGN.md" className="text-sm hover:text-white transition-colors" target="_blank" rel="noopener noreferrer">
+                <a href="https://github.com/quest-stack/Mirarr/blob/HEAD/DESIGN.md" className="text-sm hover:text-white transition-colors" target="_blank" rel="noopener noreferrer">
                   設計書
                 </a>
               </li>
               <li>
-                <a href="https://github.com/quest-stack/Mirarr/blob/claude/mirarr-branding-update-01GGevMRrQec4ubfEUBZ2q6P/LICENSE" className="text-sm hover:text-white transition-colors" target="_blank" rel="noopener noreferrer">
+                <a href="https://github.com/quest-stack/Mirarr/blob/HEAD/LICENSE" className="text-sm hover:text-white transition-colors" target="_blank" rel="noopener noreferrer">
                   ライセンス
                 </a>
               </li>
